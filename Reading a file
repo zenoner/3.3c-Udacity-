@@ -1,0 +1,6 @@
+def read_text():
+  quote = open("C:\delect_profanity\movie_quote.txt")
+  contents_of_file = quote.read()
+  print(content_of_file)
+  quote.close()
+read_text()
