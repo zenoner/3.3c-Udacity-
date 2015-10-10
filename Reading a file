@@ -1,6 +1,16 @@
+import urllib #open the url website
+
 def read_text():
   quote = open("C:\delect_profanity\movie_quote.txt")
   contents_of_file = quote.read()
   print(content_of_file)
   quote.close()
+  check_profanity(contents_of_file)
+
+def check_profanity(text_to_check):
+  connection = urllib.urlopen("http://www.wdyl.com/profanity?q=+ text_to_check")
+  output = connection.read()
+  print(output)
+  connection.close()
+
 read_text()
